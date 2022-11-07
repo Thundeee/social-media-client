@@ -9,9 +9,9 @@
     "prepare": "husky install",
     "test": "jest",
     "dev": "vite",
-    "build-vite": "vite build",
+    "build-Vite": "vite build",
     "preview": "vite preview",
-    "deployBuild": "npm run build & npm run build-vite"
+    "deployBuild": "npm run build & npm run build-Vite"
   },
   "keywords": [],
   "author": "",

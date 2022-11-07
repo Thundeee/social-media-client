@@ -1,4 +1,5 @@
 # Workflow CA
+
 [![Deploy static content to Pages](https://github.com/Thundeee/social-media-client/actions/workflows/pages.yml/badge.svg)](https://github.com/Thundeee/social-media-client/actions/workflows/pages.yml)
 
 ## Setup
@@ -13,4 +14,16 @@ setup eslint by following the steps
 
 ```
 npx eslint --init
+```
+
+Build the site
+
+```
+npm run deployBuild
+```
+
+Preview the site
+
+```
+npm run preview
 ```

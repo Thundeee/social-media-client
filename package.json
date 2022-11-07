@@ -9,6 +9,12 @@
     "prepare": "husky install",
     "test": "jest"
   },
+
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -27,7 +33,7 @@
   "lint-staged": {
     "*.js": ["eslint --cache --fix", "npm run test" ],
     "*.{js,css,md,html,scss}": "prettier --write",
-    "src/**/*.{js,jsx,ts,tsx}": ["npm run test"]
+    "src/**/*.{js}": ["npm run test"]
     
   }
 }

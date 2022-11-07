@@ -7,7 +7,12 @@
     "build": "sass src/scss:dist/css",
     "start": "sass --watch src/scss:dist/css & live-server",
     "prepare": "husky install",
-    "test": "jest"
+    "test": "jest",
+    "dev": "vite",
+    "build-vite": "vite build",
+    "preview": "vite preview",
+    "deployBuild": "npm run build & npm run build-vite"
+
   },
   "keywords": [],
   "author": "",
@@ -19,7 +24,8 @@
     "lint-staged": "^13.0.3",
     "live-server": "^1.1.0",
     "prettier": "^2.7.1",
-    "sass": "^1.54.8"
+    "sass": "^1.54.8",
+    "vite": "^3.2.3"
   },
   "dependencies": {
     "bootstrap-dark-5": "^1.1.3",

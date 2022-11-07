@@ -1,6 +1,6 @@
 {
   "name": "css-frameworks-ca",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -8,8 +8,6 @@
     "start": "sass --watch src/scss:dist/css & live-server",
     "prepare": "husky install"
   },
-
-  
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -21,7 +19,6 @@
     "prettier": "^2.7.1",
     "sass": "^1.54.8"
   },
-  
   "dependencies": {
     "bootstrap-dark-5": "^1.1.3"
   },

@@ -25,10 +25,8 @@
     "bootstrap-dark-5": "^1.1.3"
   },
   "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx,json,css}": [
-        "prettier --write",
-        "eslint --fix src/",
-        "npm run test"
-         ]
-}
+    "*.js": "eslint --cache --fix",
+    "*.{js,css,md,html,scss}": "prettier --write",
+    "*.test.js": "jest"
+  }
 }

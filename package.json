@@ -1,6 +1,6 @@
 {
   "name": "css-frameworks-ca",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -12,7 +12,6 @@
     "build-vite": "vite build",
     "preview": "vite preview",
     "deployBuild": "npm run build & npm run build-vite"
-
   },
   "keywords": [],
   "author": "",

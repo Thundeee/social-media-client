@@ -3,7 +3,7 @@ describe("postCreaterTest", () => {
   const password = Cypress.env("PASSWORD");
 
   it("loads", () => {
-    cy.visit("./");
+    cy.visit("/index.html");
     cy.login(email, password);
 
     cy.postMaker("test title", "test body").then((postTest) => {

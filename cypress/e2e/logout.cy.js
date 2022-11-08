@@ -3,7 +3,6 @@ describe("logoutTest", () => {
   const password = Cypress.env("PASSWORD");
   it("loads", () => {
     cy.visit("/");
-
     cy.login(email, password);
 
     cy.logout();

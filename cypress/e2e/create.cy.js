@@ -1,5 +1,3 @@
-import { deletePost } from "../../src/js/api/index";
-
 describe("postCreaterTest", () => {
   const email = Cypress.env("EMAIL");
   const password = Cypress.env("PASSWORD");

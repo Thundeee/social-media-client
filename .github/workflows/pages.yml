@@ -36,10 +36,10 @@ jobs:
         run: npm run build
       - name: Build Vite
         run: npm run build-Vite
-      - name: Cypress run  
-        uses: cypress-io/github-action@v4
       - name: Setup Pages
         uses: actions/configure-pages@v2
+      - name: Cypress run  
+        uses: cypress-io/github-action@v4
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:

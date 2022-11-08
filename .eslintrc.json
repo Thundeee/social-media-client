@@ -3,14 +3,13 @@
         "browser": true,
         "es2021": true,
         "jest/globals": true,
-        "node": true
+        "node": true,
+        "cypress/globals": true
     },
     "extends": "eslint:recommended",
     "overrides": [
         {
             "files": ["**/*.cy.js"],
-            "env": { "cypress/globals": true },
-            "plugins": ["cypress"],
             "extends": ["plugin:cypress/recommended"],
             "rules": {
               "cypress/no-unnecessary-waiting": "off",
@@ -25,7 +24,8 @@
     "rules": {
         "no-unused-vars": "warn"
     },
-    "plugins": ["jest"]
+    
+    "plugins": ["jest", "cypress"]
     
 
 }

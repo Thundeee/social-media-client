@@ -10,7 +10,7 @@
     "test": "jest"
   },
   "keywords": [],
-  "author": "",
+  "author": "Noroff",
   "license": "ISC",
   "devDependencies": {
     "eslint": "^8.27.0",

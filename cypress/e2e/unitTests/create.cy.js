@@ -3,7 +3,7 @@ describe("postCreaterTest", () => {
   const password = Cypress.env("PASSWORD");
   it("loads", () => {
     cy.visit("/");
-    cy.login("test5765@noroff.no", "test5765");
+    cy.login(email, password);
 
     cy.postMaker("test title", "test body").then((postTest) => {
       expect(postTest.id).to.not.be.undefined;

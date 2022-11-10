@@ -4,12 +4,7 @@ const correctPassword = Cypress.env("PASSWORD");
 describe("test login validatoions", () => {
   it("Checks bad email", () => {
     cy.visit("/");
-    cy.get("#registerForm button")
-      .contains("Login")
-      .should("be.visible")
-      .wait(1000)
-      .click()
-      .wait(1000);
+    cy.loginWithE2E();
     cy.get("#loginEmail").type("FakeMail@gmail.com");
     cy.get("#loginPassword").type(correctPassword);
     cy.get("#loginForm button").contains("Login").click().wait(1000);
@@ -21,13 +16,8 @@ describe("test login validatoions", () => {
 
   it("checks bad password", () => {
     cy.visit("/");
-    cy.get("#registerForm button")
-      .contains("Login")
-      .should("be.visible")
-      .wait(1000)
-      .click()
-      .wait(1000);
-    cy.get("#loginEmail").type(correctEmail);
+    cy.loginWithE2E();
+    cy.get("#loginEmail").type(correctEmail, 5000);
     cy.get("#loginPassword").type("123");
     cy.get("#loginForm button").contains("Login").click().wait(1000);
 
@@ -38,12 +28,8 @@ describe("test login validatoions", () => {
 
   it("checks bad email & password", () => {
     cy.visit("/");
-    cy.get("#registerForm button")
-      .contains("Login")
-      .should("be.visible")
-      .wait(1000)
-      .click()
-      .wait(1000);
+    cy.get("#registerForm button");
+    cy.loginWithE2E();
     cy.get("#loginEmail").type("FakeMail@gmail.com");
     cy.get("#loginPassword").type("123");
     cy.get("#loginForm button").contains("Login").click().wait(1000);

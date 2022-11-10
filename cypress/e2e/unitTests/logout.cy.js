@@ -1,7 +1,7 @@
 describe("logoutTest", () => {
   const email = Cypress.env("EMAIL");
   const password = Cypress.env("PASSWORD");
-  it("loads", () => {
+  it("Checks if we can logout", () => {
     cy.visit("/");
     cy.login(email, password);
 

@@ -13,6 +13,10 @@ npm i
 Build the site
 
 ```
+npm run start
+```
+
+```
 npm run deployBuild
 ```
 

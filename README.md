@@ -2,7 +2,9 @@
 
 [![Deploy static content to Pages](https://github.com/Thundeee/social-media-client/actions/workflows/pages.yml/badge.svg)](https://github.com/Thundeee/social-media-client/actions/workflows/pages.yml)
 
-[![Unit and e2e testing](https://github.com/Thundeee/social-media-client/actions/workflows/tests.yml/badge.svg)](https://github.com/Thundeee/social-media-client/actions/workflows/tests.yml)
+[![E2E testing](https://github.com/Thundeee/social-media-client/actions/workflows/e2eTests.yml/badge.svg)](https://github.com/Thundeee/social-media-client/actions/workflows/e2eTests.yml)
+
+[![Unit testing](https://github.com/Thundeee/social-media-client/actions/workflows/unitTests.yml/badge.svg)](https://github.com/Thundeee/social-media-client/actions/workflows/unitTests.yml)
 
 ## Setup
 

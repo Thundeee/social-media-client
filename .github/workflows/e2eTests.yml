@@ -18,12 +18,12 @@ permissions:
 
 # Allow one concurrent deployment
 concurrency:
-  group: "pages"
+  group: "E2E tests"
   cancel-in-progress: true
 
 jobs:
   # Single deploy job since we're just testing
-  cypress:
+  cypressE2ETests:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout

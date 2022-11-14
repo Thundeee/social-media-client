@@ -47,3 +47,6 @@ To run cypress
 ```
 npm run test-cypress
 ```
+
+eslint, prettier and jest run on commit.
+cypress tests run on Pull request.

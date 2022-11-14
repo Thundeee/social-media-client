@@ -9,5 +9,5 @@ test("adds 1 + 2 to equal 3", () => {
 });
 
 test("check for best emoji", () => {
-  emoji.map((x) => expect(emoji).toContain("🤓"));
+  expect(emoji).toContain("🤓");
 });

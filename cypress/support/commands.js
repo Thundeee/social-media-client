@@ -24,6 +24,6 @@ Cypress.Commands.add("loginWithE2E", () => {
   cy.get("#registerForm button")
     .contains("Login")
     .wait(2000)
-    .click()
+    .click({ force: true })
     .wait(1000);
 });

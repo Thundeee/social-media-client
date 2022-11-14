@@ -1,5 +1,5 @@
 # Simple workflow for deploying static content to GitHub Pages
-name: Unit and e2e testing
+name: Unit testing
 
 on:
   # Runs on Pull request
@@ -18,12 +18,12 @@ permissions:
 
 # Allow one concurrent deployment
 concurrency:
-  group: "pages"
+  group: "Unit tests"
   cancel-in-progress: true
 
 jobs:
   # Single deploy job since we're just testing
-  cypress:
+  cypressUnitTest:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -36,6 +36,8 @@ jobs:
         run: npm run build
       - name: Cypress run  
         uses: cypress-io/github-action@v4
+        with:
+          spec: cypress/e2e/unitTests
         env:
             EMAIL: ${{secrets.EMAIL}}
             PASSWORD: ${{secrets.PASSWORD}}

@@ -2,6 +2,10 @@
 
 [![Deploy static content to Pages](https://github.com/Thundeee/social-media-client/actions/workflows/pages.yml/badge.svg)](https://github.com/Thundeee/social-media-client/actions/workflows/pages.yml)
 
+[![E2E testing](https://github.com/Thundeee/social-media-client/actions/workflows/e2eTests.yml/badge.svg)](https://github.com/Thundeee/social-media-client/actions/workflows/e2eTests.yml)
+
+[![Unit testing](https://github.com/Thundeee/social-media-client/actions/workflows/unitTests.yml/badge.svg)](https://github.com/Thundeee/social-media-client/actions/workflows/unitTests.yml)
+
 ## Setup
 
 install packages
@@ -26,7 +30,8 @@ Preview the site
 npm run preview
 ```
 
-##Setup Local Enviorment
+## Setup Local Enviorment
+
 To run test locally you have to make a .env file and put an Email and Password in it like shown below
 
 ```
@@ -36,3 +41,12 @@ PASSWORD = EXAMPLEPASSWORD
 
 Note: This has to be from a REGISTERED account on the noroff api. You can find the docs here: https://noroff-api-docs.netlify.app/social-endpoints/authentication#register.
 You can also register a user when running the project on localhost.
+
+To run cypress
+
+```
+npm run test-cypress
+```
+
+eslint, prettier and jest run on commit.
+cypress tests run on Pull request.

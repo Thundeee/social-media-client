@@ -32,7 +32,6 @@ To run test locally you have to make a .env file and put an Email and Password i
 ```
 EMAIL = EXAMPLEEMAIL@EXAMPLE.EXAMPLE
 PASSWORD = EXAMPLEPASSWORD
-
 ```
 
 Note: This has to be from a REGISTERED account on the noroff api. You can find the docs here: https://noroff-api-docs.netlify.app/social-endpoints/authentication#register.

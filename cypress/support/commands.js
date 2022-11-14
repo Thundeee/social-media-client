@@ -23,7 +23,6 @@ Cypress.Commands.add("deletePost", async (id) => {
 Cypress.Commands.add("loginWithE2E", () => {
   cy.get("#registerForm button")
     .contains("Login")
-    .should("be.visible")
     .wait(2000)
     .click()
     .wait(1000);

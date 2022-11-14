@@ -19,3 +19,11 @@ Cypress.Commands.add("postMaker", async (title, body, media, tags) => {
 Cypress.Commands.add("deletePost", async (id) => {
   await deletePost(id);
 });
+
+Cypress.Commands.add("loginWithE2E", () => {
+  cy.get("#registerForm button")
+    .contains("Login")
+    .wait(2000)
+    .click()
+    .wait(1000);
+});

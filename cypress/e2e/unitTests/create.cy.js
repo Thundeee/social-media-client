@@ -1,7 +1,7 @@
 describe("postCreaterTest", () => {
   const email = Cypress.env("EMAIL");
   const password = Cypress.env("PASSWORD");
-  it("loads", () => {
+  it("Checks if we can make a post", () => {
     cy.visit("/");
     cy.login(email, password);
 

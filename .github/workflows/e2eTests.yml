@@ -1,10 +1,11 @@
 # Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
+name: E2E testing
 
 on:
-  # Runs on pushes targeting the default branch
-  push:
-    branches: ["master"]
+  # Runs on Pull request
+  pull_request:
+    branches: ["master", "workflow"]
+
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -17,37 +18,26 @@ permissions:
 
 # Allow one concurrent deployment
 concurrency:
-  group: "pages"
+  group: "E2E tests"
   cancel-in-progress: true
 
 jobs:
-  # Single deploy job since we're just deploying
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  # Single deploy job since we're just testing
+  cypressE2ETests:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+      - name: install node
+        uses: actions/setup-node@v3
       - name: Install Dependencies  
         run: npm i
       - name: Build SASS
         run: npm run build
-      - name: Build Vite
-        run: npm run build-Vite
-      - name: Setup Pages
-        uses: actions/configure-pages@v2
       - name: Cypress run  
         uses: cypress-io/github-action@v4
+        with:
+          spec: cypress/e2e/e2e
         env:
             EMAIL: ${{secrets.EMAIL}}
             PASSWORD: ${{secrets.PASSWORD}}
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
-        with:
-          # Upload entire repository
-          path: './vite'
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v1
